@@ -1,0 +1,102 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g., v1.0.0)'
+        required: true
+
+jobs:
+  build:
+    name: Build and Release
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+      
+      - name: Get version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Run tests
+        run: make test
+      
+      - name: Build release packages
+        env:
+          VERSION: ${{ steps.version.outputs.VERSION }}
+        run: make release
+      
+      - name: Generate release notes
+        id: release_notes
+        run: |
+          cat > release_notes.md << 'EOF'
+          ## gx ${{ steps.version.outputs.VERSION }}
+          
+          ### Installation
+          
+          Download the appropriate binary for your platform below.
+          
+          #### Linux/macOS
+          ```bash
+          # Download and extract
+          tar -xzf gx-${{ steps.version.outputs.VERSION }}-linux-amd64.tar.gz
+          
+          # Move to PATH
+          sudo mv gx /usr/local/bin/
+          
+          # Verify installation
+          gx --version
+          ```
+          
+          #### Windows
+          ```powershell
+          # Extract the zip file and add to PATH
+          # Or run directly from extracted location
+          .\gx.exe --version
+          ```
+          
+          ### Checksums
+          
+          SHA256 checksums are available in `checksums.txt`.
+          
+          ### Changes
+          
+          See [CHANGELOG.md](CHANGELOG.md) for detailed changes.
+          EOF
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.VERSION }}
+          name: Release ${{ steps.version.outputs.VERSION }}
+          body_path: release_notes.md
+          files: |
+            dist/*
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-packages
+          path: dist/*
+          retention-days: 30
