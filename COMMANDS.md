@@ -59,6 +59,102 @@ gx --help
 gx install --help
 ```
 
+## 安装和配置命令
+
+### init-install
+
+将 gx 安装到系统 PATH，使其可以在任何位置使用。
+
+#### 语法
+
+```bash
+gx init-install [flags]
+```
+
+#### 选项
+
+- `-f, --force` - 强制重新安装，即使已经安装
+
+#### 示例
+
+```bash
+# 首次安装
+./build/gx init-install
+
+# 强制重新安装
+./build/gx init-install --force
+```
+
+#### 行为
+
+**Windows:**
+1. 将 gx.exe 复制到 `%LOCALAPPDATA%\gx\bin`
+2. 使用 PowerShell 将该目录添加到用户 PATH 环境变量
+3. 提示重启终端以使更改生效
+
+**Linux/macOS:**
+1. 提供两个安装选项：
+   - `/usr/local/bin` - 系统级安装（需要 sudo）
+   - `~/.local/bin` - 用户级安装（无需 sudo）
+2. 复制 gx 到选定目录
+3. 设置可执行权限
+4. 如果安装到用户目录，自动添加到 shell 配置文件（.bashrc, .zshrc 等）
+5. 提示重新加载 shell 配置或重启终端
+
+#### 安装位置
+
+| 操作系统 | 默认位置 | 需要权限 |
+|---------|---------|---------|
+| Windows | `%LOCALAPPDATA%\gx\bin` | 否 |
+| Linux (系统级) | `/usr/local/bin` | sudo |
+| Linux (用户级) | `~/.local/bin` | 否 |
+| macOS (系统级) | `/usr/local/bin` | sudo |
+| macOS (用户级) | `~/.local/bin` | 否 |
+
+#### 验证安装
+
+安装完成后，重启终端并运行：
+
+```bash
+# 检查 gx 是否在 PATH 中
+which gx        # Linux/macOS
+where.exe gx    # Windows
+
+# 验证版本
+gx --version
+```
+
+#### 故障排除
+
+**问题：安装后仍然找不到 gx 命令**
+
+解决方案：
+- Windows: 重启命令提示符或 PowerShell
+- Linux/macOS: 运行 `source ~/.bashrc` 或 `source ~/.zshrc`，或重启终端
+
+**问题：权限被拒绝**
+
+解决方案：
+- Linux/macOS: 选择用户级安装（`~/.local/bin`）而不是系统级
+- 或者使用 `sudo` 运行安装命令
+
+**问题：PATH 没有自动更新**
+
+解决方案：
+手动添加到 shell 配置文件：
+
+```bash
+# bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+# zsh
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+---
+
 ## 版本管理命令
 
 ### install

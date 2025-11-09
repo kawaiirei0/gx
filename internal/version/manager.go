@@ -2,6 +2,7 @@ package version
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"os"
 	"os/exec"
@@ -129,13 +130,16 @@ func (m *manager) scanGxVersions(versionsDir string, activeVersion string) ([]in
 		}
 
 		// 检查目录名是否符合 Go 版本格式
-		matches := versionRegex.FindStringSubmatch(entry.Name())
+		dirName := entry.Name()
+		matches := versionRegex.FindStringSubmatch(dirName)
 		if len(matches) < 2 {
 			continue
 		}
 
-		versionNum := matches[1]
-		versionPath := filepath.Join(versionsDir, entry.Name())
+		// 使用完整的目录名作为版本号（包含 "go" 前缀）
+		// 例如：目录名 "go1.25.4" -> 版本号 "go1.25.4"
+		fullVersion := dirName
+		versionPath := filepath.Join(versionsDir, dirName)
 
 		// 验证该目录是否包含有效的 Go 安装
 		if !m.isValidGoInstallation(versionPath) {
@@ -150,9 +154,9 @@ func (m *manager) scanGxVersions(versionsDir string, activeVersion string) ([]in
 		}
 
 		versions = append(versions, interfaces.GoVersion{
-			Version:     versionNum,
+			Version:     fullVersion,
 			Path:        versionPath,
-			IsActive:    versionNum == activeVersion,
+			IsActive:    fullVersion == activeVersion,
 			InstallDate: installDate,
 		})
 	}
@@ -171,13 +175,14 @@ func (m *manager) detectSystemGoVersion() (*interfaces.GoVersion, error) {
 
 	// 解析版本号，格式如: "go version go1.21.5 windows/amd64"
 	versionStr := string(output)
-	versionRegex := regexp.MustCompile(`go version go(\d+\.\d+(?:\.\d+)?)`)
+	versionRegex := regexp.MustCompile(`go version (go\d+\.\d+(?:\.\d+)?)`)
 	matches := versionRegex.FindStringSubmatch(versionStr)
 	if len(matches) < 2 {
 		return nil, errors.ErrInvalidVersion.WithMessage("failed to parse go version output")
 	}
 
-	versionNum := matches[1]
+	// 使用完整版本号（包含 "go" 前缀）
+	fullVersion := matches[1]
 
 	// 获取 GOROOT 路径
 	goroot := os.Getenv(constants.EnvGoRoot)
@@ -191,7 +196,7 @@ func (m *manager) detectSystemGoVersion() (*interfaces.GoVersion, error) {
 	}
 
 	return &interfaces.GoVersion{
-		Version:  versionNum,
+		Version:  fullVersion,
 		Path:     goroot,
 		IsActive: true,
 	}, nil
@@ -323,6 +328,9 @@ func (m *manager) Install(version string, progress interfaces.ProgressCallback) 
 		return errors.ErrStorageFailed.WithCause(err).WithMessage("installation succeeded but failed to save config")
 	}
 
+	// 安装成功，清除清理函数（不需要清理）
+	recovery.Clear()
+
 	logger.Info("Go version %s installed successfully", normalizedVersion)
 	return nil
 }
@@ -339,17 +347,28 @@ func (m *manager) SwitchTo(version string) error {
 		return errors.ErrStorageFailed.WithCause(err).WithMessage("failed to load config")
 	}
 
+	// 规范化版本号
+	normalizedVersion := version
+	if !strings.HasPrefix(version, "go") {
+		normalizedVersion = "go" + version
+	}
+
 	// 检查版本是否已安装
-	versionPath, ok := cfg.Versions[version]
+	versionPath, ok := cfg.Versions[normalizedVersion]
 	if !ok {
-		logger.Error("Version %s is not installed", version)
-		return errors.ErrVersionNotInstalled.WithMessage("version " + version + " is not installed")
+		logger.Error("Version %s is not installed", normalizedVersion)
+		// 提供更友好的错误消息
+		versionDisplay := strings.TrimPrefix(normalizedVersion, "go")
+		return errors.ErrVersionNotInstalled.
+			WithMessage(fmt.Sprintf("Go %s is not installed. Install it first using: gx install %s", versionDisplay, versionDisplay))
 	}
 
 	// 验证版本目录是否存在且有效
 	if !m.isValidGoInstallation(versionPath) {
-		logger.Error("Version %s installation is invalid or corrupted", version)
-		return errors.ErrVersionNotFound.WithMessage("version installation is invalid or corrupted")
+		logger.Error("Version %s installation is invalid or corrupted", normalizedVersion)
+		versionDisplay := strings.TrimPrefix(normalizedVersion, "go")
+		return errors.ErrVersionNotFound.
+			WithMessage(fmt.Sprintf("Go %s installation is invalid or corrupted. Try reinstalling: gx uninstall %s && gx install %s", versionDisplay, versionDisplay, versionDisplay))
 	}
 
 	// 更新环境变量
@@ -364,7 +383,7 @@ func (m *manager) SwitchTo(version string) error {
 	}
 
 	// 更新配置中的激活版本
-	cfg.ActiveVersion = version
+	cfg.ActiveVersion = normalizedVersion
 	if err := m.configStore.Save(cfg); err != nil {
 		logger.Error("Failed to save config: %v", err)
 		return errors.ErrStorageFailed.WithCause(err).WithMessage("failed to save config")
@@ -377,8 +396,8 @@ func (m *manager) SwitchTo(version string) error {
 		return errors.ErrEnvironmentSetupFailed.WithCause(err).WithMessage("failed to verify version switch")
 	}
 
-	if activeVersion.Version != version {
-		logger.Error("Version switch verification failed: expected %s, got %s", version, activeVersion.Version)
+	if activeVersion.Version != normalizedVersion {
+		logger.Error("Version switch verification failed: expected %s, got %s", normalizedVersion, activeVersion.Version)
 		return errors.ErrEnvironmentSetupFailed.WithMessage("version switch verification failed")
 	}
 
@@ -388,7 +407,7 @@ func (m *manager) SwitchTo(version string) error {
 		logger.Warn("Version switch took %v (target: 300ms)", elapsed)
 	}
 
-	logger.Info("Successfully switched to Go version %s (took %v)", version, elapsed)
+	logger.Info("Successfully switched to Go version %s (took %v)", normalizedVersion, elapsed)
 	return nil
 }
 

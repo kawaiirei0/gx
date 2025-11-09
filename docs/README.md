@@ -11,6 +11,8 @@
 | 文档 | 描述 | 适合人群 |
 |------|------|----------|
 | [README.md](../README.md) | 项目概览、安装指南和快速开始 | 所有用户 |
+| [QUICKSTART.md](../QUICKSTART.md) | 5 分钟快速上手指南 | 新用户 |
+| [INSTALLATION.md](../INSTALLATION.md) | 详细的安装指南和故障排除 | 所有用户 |
 | [COMMANDS.md](../COMMANDS.md) | 详细的命令参考和使用示例 | 所有用户 |
 | [BUILD.md](../BUILD.md) | 构建说明和安装指南 | 想要从源码构建的用户 |
 | [CHANGELOG.md](../CHANGELOG.md) | 版本变更历史 | 想了解更新内容的用户 |
@@ -31,9 +33,9 @@
 
 如果你是第一次使用 gx：
 
-1. 阅读 [README.md](../README.md) 了解项目概览
-2. 按照安装指南安装 gx
-3. 查看快速开始部分开始使用
+1. 阅读 [QUICKSTART.md](../QUICKSTART.md) 快速上手（推荐）
+2. 或阅读 [README.md](../README.md) 了解项目概览
+3. 按照 [INSTALLATION.md](../INSTALLATION.md) 安装 gx
 4. 参考 [COMMANDS.md](../COMMANDS.md) 了解详细命令
 
 ### 贡献者
@@ -143,7 +145,8 @@
 
 ### 安装和配置
 
-- [安装指南](../README.md#-安装)
+- [快速开始](../QUICKSTART.md)
+- [详细安装指南](../INSTALLATION.md)
 - [配置说明](../README.md#-配置)
 - [从源码构建](../BUILD.md)
 
@@ -186,6 +189,8 @@
 | 文档 | 版本 | 最后更新 |
 |------|------|----------|
 | README.md | 1.0 | 2024-01-15 |
+| QUICKSTART.md | 1.0 | 2024-01-15 |
+| INSTALLATION.md | 1.0 | 2024-01-15 |
 | COMMANDS.md | 1.0 | 2024-01-15 |
 | ARCHITECTURE.md | 1.0 | 2024-01-15 |
 | CONTRIBUTING.md | 1.0 | 2024-01-15 |

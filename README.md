@@ -28,7 +28,7 @@
 
 ## 🚀 安装
 
-### 从源码构建
+### 快速安装（推荐）
 
 **前置要求：** Go 1.19 或更高版本
 
@@ -37,17 +37,61 @@
 git clone https://github.com/yourusername/gx.git
 cd gx
 
-# 构建并安装
+# 一键安装（自动添加到系统 PATH）
+# Linux/macOS
+chmod +x install.sh
+./install.sh
+
 # Windows (PowerShell)
+.\install.ps1
+```
+
+这个脚本会：
+1. 构建 gx
+2. 自动将 gx 添加到系统 PATH
+3. 让你可以在任何位置使用 `gx` 命令
+
+### 手动安装
+
+如果你想手动控制安装过程：
+
+```bash
+# 1. 构建 gx
+# Windows (PowerShell)
+.\build.ps1 build
+
+# Linux/macOS
+./build.sh build
+
+# 2. 运行 init-install 命令
+# Windows
+.\build\gx.exe init-install
+
+# Linux/macOS
+./build/gx init-install
+```
+
+`init-install` 命令会：
+- 将 gx 复制到系统目录
+- 自动添加到 PATH 环境变量
+- 在 Windows 上：安装到 `%LOCALAPPDATA%\gx\bin`
+- 在 Linux/macOS 上：可选择安装到 `/usr/local/bin` 或 `~/.local/bin`
+
+### 传统安装方式
+
+使用 Go 的标准安装方式：
+
+```bash
+# 安装到 GOPATH/bin
+go install ./cmd/gx
+
+# 或使用构建脚本
+# Windows
 .\build.ps1 install
 
 # Linux/macOS
-./build.sh install
-# 或使用 Make
 make install
 ```
-
-安装后，`gx` 将被复制到系统路径中，可以在任何位置使用。
 
 ### 从发布版本安装
 
@@ -78,6 +122,7 @@ gx cross-build --os linux --arch amd64 -o myapp
 ## 📚 文档
 
 - **[README.md](README.md)** - 项目概览和快速开始（本文档）
+- **[INSTALLATION.md](INSTALLATION.md)** - 详细的安装指南和故障排除
 - **[COMMANDS.md](COMMANDS.md)** - 详细的命令参考文档
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** - 架构设计和技术细节
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - 贡献指南和开发规范

@@ -32,6 +32,7 @@ go.work
 
 # gx specific
 .gx/
+.github/
 
 # Logs
 *.log
