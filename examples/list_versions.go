@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/yourusername/gx/pkg/constants"
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 func main() {

@@ -1,16 +1,16 @@
 package cmd
 
 import (
-	"github.com/yourusername/gx/internal/crossbuilder"
-	"github.com/yourusername/gx/internal/downloader"
-	"github.com/yourusername/gx/internal/environment"
-	"github.com/yourusername/gx/internal/installer"
-	"github.com/yourusername/gx/internal/platform"
-	"github.com/yourusername/gx/internal/version"
-	"github.com/yourusername/gx/internal/wrapper"
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/internal/crossbuilder"
+	"github.com/kawaiirei0/gx/internal/downloader"
+	"github.com/kawaiirei0/gx/internal/environment"
+	"github.com/kawaiirei0/gx/internal/installer"
+	"github.com/kawaiirei0/gx/internal/platform"
+	"github.com/kawaiirei0/gx/internal/version"
+	"github.com/kawaiirei0/gx/internal/wrapper"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 	
-	configpkg "github.com/yourusername/gx/internal/config"
+	configpkg "github.com/kawaiirei0/gx/internal/config"
 )
 
 // AppContext 包含应用程序的所有依赖

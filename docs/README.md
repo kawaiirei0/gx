@@ -180,9 +180,9 @@
 
 请通过以下方式帮助我们改进：
 
-1. 提交 [Issue](https://github.com/yourusername/gx/issues)
+1. 提交 [Issue](https://github.com/kawaiirei0/gx/issues)
 2. 提交 Pull Request 修复
-3. 在 [Discussions](https://github.com/yourusername/gx/discussions) 中讨论
+3. 在 [Discussions](https://github.com/kawaiirei0/gx/discussions) 中讨论
 
 ## 📝 文档版本
 
@@ -199,10 +199,10 @@
 
 ## 🌐 其他资源
 
-- [GitHub 仓库](https://github.com/yourusername/gx)
-- [问题追踪](https://github.com/yourusername/gx/issues)
-- [讨论区](https://github.com/yourusername/gx/discussions)
-- [发布页面](https://github.com/yourusername/gx/releases)
+- [GitHub 仓库](https://github.com/kawaiirei0/gx)
+- [问题追踪](https://github.com/kawaiirei0/gx/issues)
+- [讨论区](https://github.com/kawaiirei0/gx/discussions)
+- [发布页面](https://github.com/kawaiirei0/gx/releases)
 
 ---
 

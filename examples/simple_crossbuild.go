@@ -6,7 +6,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/yourusername/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/constants"
 )
 
 func main() {

@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/yourusername/gx/internal/ui"
-	"github.com/yourusername/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/internal/ui"
+	"github.com/kawaiirei0/gx/pkg/errors"
 )
 
 // TestProgressBar 测试进度条功能

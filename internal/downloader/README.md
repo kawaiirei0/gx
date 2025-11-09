@@ -14,7 +14,7 @@ The downloader package provides functionality to download Go installation packag
 ### Creating a Downloader
 
 ```go
-import "github.com/yourusername/gx/internal/downloader"
+import "github.com/kawaiirei0/gx/internal/downloader"
 
 dl := downloader.NewDownloader()
 ```

@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/yourusername/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/errors"
 )
 
 // ErrorFormatter 错误格式化器

@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/yourusername/gx/internal/config"
-	"github.com/yourusername/gx/internal/downloader"
-	"github.com/yourusername/gx/internal/installer"
-	"github.com/yourusername/gx/internal/platform"
+	"github.com/kawaiirei0/gx/internal/config"
+	"github.com/kawaiirei0/gx/internal/downloader"
+	"github.com/kawaiirei0/gx/internal/installer"
+	"github.com/kawaiirei0/gx/internal/platform"
 )
 
 func main() {

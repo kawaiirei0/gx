@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/yourusername/gx/internal/environment"
-	"github.com/yourusername/gx/internal/platform"
+	"github.com/kawaiirei0/gx/internal/environment"
+	"github.com/kawaiirei0/gx/internal/platform"
 )
 
 // ExampleNewManager 演示如何创建环境管理器

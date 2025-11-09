@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/yourusername/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/errors"
 )
 
 // setEnvWindows 在 Windows 上持久化设置环境变量

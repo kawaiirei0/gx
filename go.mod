@@ -1,4 +1,4 @@
-module github.com/yourusername/gx
+module github.com/kawaiirei0/gx
 
 go 1.24.5
 

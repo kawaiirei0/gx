@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/yourusername/gx/pkg/constants"
-	"github.com/yourusername/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/errors"
 )
 
 // EnvBackup 环境变量备份结构

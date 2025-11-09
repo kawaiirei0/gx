@@ -32,8 +32,8 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/gx/internal/environment"
-    "github.com/yourusername/gx/internal/platform"
+    "github.com/kawaiirei0/gx/internal/environment"
+    "github.com/kawaiirei0/gx/internal/platform"
 )
 
 func main() {

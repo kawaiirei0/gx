@@ -127,7 +127,7 @@ $ gx install 1.25.4
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 
 # 2. 一键安装
@@ -222,8 +222,8 @@ rm -rf ~/.gx
 
 如果你遇到问题或有建议：
 
-- 📝 [提交 Issue](https://github.com/yourusername/gx/issues)
-- 💬 [参与讨论](https://github.com/yourusername/gx/discussions)
+- 📝 [提交 Issue](https://github.com/kawaiirei0/gx/issues)
+- 💬 [参与讨论](https://github.com/kawaiirei0/gx/discussions)
 - 📖 [查看文档](docs/README.md)
 
 ---

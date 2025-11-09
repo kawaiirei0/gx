@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/yourusername/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/constants"
 )
 
 // GetExecutableExtension 获取当前平台的可执行文件扩展名

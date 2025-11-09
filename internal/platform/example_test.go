@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/yourusername/gx/internal/platform"
+	"github.com/kawaiirei0/gx/internal/platform"
 )
 
 // TestPlatformAdapter 测试平台适配器的基本功能

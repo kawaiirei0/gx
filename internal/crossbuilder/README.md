@@ -26,8 +26,8 @@
 package main
 
 import (
-    "github.com/yourusername/gx/internal/crossbuilder"
-    "github.com/yourusername/gx/pkg/interfaces"
+    "github.com/kawaiirei0/gx/internal/crossbuilder"
+    "github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 func main() {

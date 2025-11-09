@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 // adapter 实现 PlatformAdapter 接口

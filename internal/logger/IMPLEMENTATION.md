@@ -131,7 +131,7 @@ The implementation has been tested and verified:
 
 ### Basic Usage
 ```go
-import "github.com/yourusername/gx/internal/logger"
+import "github.com/kawaiirei0/gx/internal/logger"
 
 func main() {
     logger.Init()

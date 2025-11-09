@@ -447,7 +447,7 @@ defer file.Close()
 使用 gx 的日志系统：
 
 ```go
-import "github.com/yourusername/gx/internal/logger"
+import "github.com/kawaiirei0/gx/internal/logger"
 
 logger.Info("Operation started")
 logger.Error("Operation failed: %v", err)

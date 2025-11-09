@@ -34,7 +34,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 
 # 一键安装（自动添加到系统 PATH）
@@ -95,7 +95,7 @@ make install
 
 ### 从发布版本安装
 
-从 [Releases](https://github.com/yourusername/gx/releases) 页面下载适合你操作系统的预编译二进制文件。
+从 [Releases](https://github.com/kawaiirei0/gx/releases) 页面下载适合你操作系统的预编译二进制文件。
 
 ## 🎯 快速开始
 
@@ -546,8 +546,8 @@ gx 采用接口驱动的设计，主要接口包括：
 
 ## 📞 联系方式
 
-- 问题反馈：[GitHub Issues](https://github.com/yourusername/gx/issues)
-- 功能建议：[GitHub Discussions](https://github.com/yourusername/gx/discussions)
+- 问题反馈：[GitHub Issues](https://github.com/kawaiirei0/gx/issues)
+- 功能建议：[GitHub Discussions](https://github.com/kawaiirei0/gx/discussions)
 
 ---
 

@@ -5,11 +5,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/yourusername/gx/internal/config"
-	"github.com/yourusername/gx/internal/crossbuilder"
-	"github.com/yourusername/gx/internal/platform"
-	"github.com/yourusername/gx/internal/version"
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/internal/config"
+	"github.com/kawaiirei0/gx/internal/crossbuilder"
+	"github.com/kawaiirei0/gx/internal/platform"
+	"github.com/kawaiirei0/gx/internal/version"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 func main() {

@@ -105,7 +105,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 
 # 2. 快速安装（自动添加到 PATH）
@@ -132,7 +132,7 @@ go version
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 
 # 2. 构建
@@ -275,12 +275,12 @@ Windows 上运行 PowerShell 脚本可能需要调整执行策略。
 
 ## 相关链接
 
-- [GitHub 仓库](https://github.com/yourusername/gx)
-- [问题追踪](https://github.com/yourusername/gx/issues)
-- [讨论区](https://github.com/yourusername/gx/discussions)
+- [GitHub 仓库](https://github.com/kawaiirei0/gx)
+- [问题追踪](https://github.com/kawaiirei0/gx/issues)
+- [讨论区](https://github.com/kawaiirei0/gx/discussions)
 - [文档中心](docs/README.md)
 
 ---
 
 **最后更新：** 2024-01-15  
-**版本：** v1.0.0
+**版本：** v1.0.

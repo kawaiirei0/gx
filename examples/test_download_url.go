@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/yourusername/gx/internal/downloader"
-	"github.com/yourusername/gx/internal/platform"
+	"github.com/kawaiirei0/gx/internal/downloader"
+	"github.com/kawaiirei0/gx/internal/platform"
 )
 
 func main() {

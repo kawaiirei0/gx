@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yourusername/gx/internal/logger"
-	"github.com/yourusername/gx/pkg/constants"
-	"github.com/yourusername/gx/pkg/errors"
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/internal/logger"
+	"github.com/kawaiirei0/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 // manager 实现 VersionManager 接口

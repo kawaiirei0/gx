@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/yourusername/gx/internal/logger"
+	"github.com/kawaiirei0/gx/internal/logger"
 )
 
 // ExampleLogger 演示日志记录器的基本使用

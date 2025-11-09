@@ -21,7 +21,7 @@
 2. 克隆仓库并运行安装脚本：
 
 ```powershell
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 .\install.ps1
 ```
@@ -36,7 +36,7 @@ cd gx
 2. 克隆仓库并运行安装脚本：
 
 ```bash
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 chmod +x install.sh
 ./install.sh
@@ -57,7 +57,7 @@ chmod +x install.sh
 2. 克隆仓库并运行安装脚本：
 
 ```bash
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 chmod +x install.sh
 ./install.sh
@@ -127,7 +127,7 @@ gx 会被安装到：
 
 通常是：
 ```
-C:\Users\<YourUsername>\AppData\Local\gx\bin\gx.exe
+C:\Users\<kawaiirei0>\AppData\Local\gx\bin\gx.exe
 ```
 
 这个目录会被自动添加到用户的 PATH 环境变量。
@@ -179,7 +179,7 @@ where.exe gx
 
 应该显示：
 ```
-C:\Users\<YourUsername>\AppData\Local\gx\bin\gx.exe
+C:\Users\<kawaiirei0>\AppData\Local\gx\bin\gx.exe
 ```
 
 **Linux/macOS:**
@@ -475,8 +475,8 @@ ln -sf ~/.local/bin/gx-1.1.0 ~/.local/bin/gx
 如果遇到其他问题：
 
 1. 查看日志文件：`~/.gx/logs/gx.log`
-2. 提交 Issue：https://github.com/yourusername/gx/issues
-3. 查看文档：https://github.com/yourusername/gx/tree/main/docs
+2. 提交 Issue：https://github.com/kawaiirei0/gx/issues
+3. 查看文档：https://github.com/kawaiirei0/gx/tree/main/docs
 
 ---
 

@@ -10,8 +10,8 @@ The installer package handles the extraction and installation of Go distribution
 
 ```go
 import (
-    "github.com/yourusername/gx/internal/installer"
-    "github.com/yourusername/gx/internal/platform"
+    "github.com/kawaiirei0/gx/internal/installer"
+    "github.com/kawaiirei0/gx/internal/platform"
 )
 
 platformAdapter := platform.NewAdapter()

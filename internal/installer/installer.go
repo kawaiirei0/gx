@@ -13,9 +13,9 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/yourusername/gx/pkg/constants"
-	"github.com/yourusername/gx/pkg/errors"
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 // goInstaller 实现 Installer 接口

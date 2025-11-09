@@ -28,9 +28,9 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/gx/internal/wrapper"
-    "github.com/yourusername/gx/internal/version"
-    "github.com/yourusername/gx/internal/platform"
+    "github.com/kawaiirei0/gx/internal/wrapper"
+    "github.com/kawaiirei0/gx/internal/version"
+    "github.com/kawaiirei0/gx/internal/platform"
 )
 
 func main() {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/yourusername/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/errors"
 )
 
 func main() {

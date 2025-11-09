@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"github.com/yourusername/gx/internal/ui"
-	"github.com/yourusername/gx/pkg/constants"
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/internal/ui"
+	"github.com/kawaiirei0/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 var (

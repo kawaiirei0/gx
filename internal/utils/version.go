@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/yourusername/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/errors"
 )
 
 // ValidateVersion 验证版本号格式

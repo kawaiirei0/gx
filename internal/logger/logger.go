@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/yourusername/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/constants"
 )
 
 // LogLevel 日志级别

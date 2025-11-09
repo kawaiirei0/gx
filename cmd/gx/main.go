@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/yourusername/gx/cmd/gx/cmd"
+	"github.com/kawaiirei0/gx/cmd/gx/cmd"
 )
 
 // Version information (set via ldflags during build)

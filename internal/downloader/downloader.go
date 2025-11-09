@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/yourusername/gx/internal/logger"
-	"github.com/yourusername/gx/pkg/constants"
-	"github.com/yourusername/gx/pkg/errors"
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/internal/logger"
+	"github.com/kawaiirei0/gx/pkg/constants"
+	"github.com/kawaiirei0/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 // httpDownloader 基于 HTTP 的下载器实现

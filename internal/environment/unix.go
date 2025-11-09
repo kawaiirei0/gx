@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/yourusername/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/errors"
 )
 
 // setEnvUnix 在 Unix 系统（Linux/macOS）上持久化设置环境变量

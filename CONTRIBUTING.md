@@ -38,7 +38,7 @@
 
 ### 报告 Bug
 
-如果你发现了 Bug，请通过 [GitHub Issues](https://github.com/yourusername/gx/issues) 报告。
+如果你发现了 Bug，请通过 [GitHub Issues](https://github.com/kawaiirei0/gx/issues) 报告。
 
 **好的 Bug 报告应该包含：**
 
@@ -83,7 +83,7 @@
 
 ### 提出功能建议
 
-我们欢迎新功能建议！请通过 [GitHub Discussions](https://github.com/yourusername/gx/discussions) 或 Issues 提出。
+我们欢迎新功能建议！请通过 [GitHub Discussions](https://github.com/kawaiirei0/gx/discussions) 或 Issues 提出。
 
 **好的功能建议应该包含：**
 
@@ -104,7 +104,7 @@
 ### 克隆仓库
 
 ```bash
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 ```
 
@@ -178,7 +178,7 @@ import (
     "github.com/spf13/cobra"
     
     // 本项目包
-    "github.com/yourusername/gx/pkg/interfaces"
+    "github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 // 常量
@@ -429,7 +429,7 @@ git clone https://github.com/your-username/gx.git
 cd gx
 
 # 添加上游仓库
-git remote add upstream https://github.com/yourusername/gx.git
+git remote add upstream https://github.com/kawaiirei0/gx.git
 
 # 创建特性分支
 git checkout -b feature/my-feature
@@ -648,8 +648,8 @@ go tool cover -html=coverage.out -o coverage.html
 如果你有任何问题：
 
 - 📖 查看 [文档](README.md)
-- 💬 在 [Discussions](https://github.com/yourusername/gx/discussions) 提问
-- 🐛 在 [Issues](https://github.com/yourusername/gx/issues) 报告问题
+- 💬 在 [Discussions](https://github.com/kawaiirei0/gx/discussions) 提问
+- 🐛 在 [Issues](https://github.com/kawaiirei0/gx/issues) 报告问题
 
 ## 致谢
 

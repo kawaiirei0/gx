@@ -15,7 +15,7 @@
 ### 初始化日志记录器
 
 ```go
-import "github.com/yourusername/gx/internal/logger"
+import "github.com/kawaiirei0/gx/internal/logger"
 
 func main() {
     // 初始化日志记录器

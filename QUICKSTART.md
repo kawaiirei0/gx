@@ -7,7 +7,7 @@
 ### Windows
 
 ```powershell
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 .\install.ps1
 ```
@@ -15,7 +15,7 @@ cd gx
 ### Linux/macOS
 
 ```bash
-git clone https://github.com/yourusername/gx.git
+git clone https://github.com/kawaiirei0/gx.git
 cd gx
 chmod +x install.sh
 ./install.sh
@@ -107,8 +107,8 @@ gx cross-build --os linux --arch amd64 -o myapp
 ## 需要帮助？
 
 - 查看 [故障排除](INSTALLATION.md#故障排除)
-- 提交 [Issue](https://github.com/yourusername/gx/issues)
-- 参与 [讨论](https://github.com/yourusername/gx/discussions)
+- 提交 [Issue](https://github.com/kawaiirei0/gx/issues)
+- 参与 [讨论](https://github.com/kawaiirei0/gx/discussions)
 
 ---
 

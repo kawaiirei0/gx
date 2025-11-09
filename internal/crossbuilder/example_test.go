@@ -3,8 +3,8 @@ package crossbuilder_test
 import (
 	"fmt"
 
-	"github.com/yourusername/gx/internal/crossbuilder"
-	"github.com/yourusername/gx/pkg/interfaces"
+	"github.com/kawaiirei0/gx/internal/crossbuilder"
+	"github.com/kawaiirei0/gx/pkg/interfaces"
 )
 
 // ExampleCrossBuilder_Build 演示如何使用跨平台构建器

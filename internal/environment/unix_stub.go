@@ -3,7 +3,7 @@
 package environment
 
 import (
-	"github.com/yourusername/gx/pkg/errors"
+	"github.com/kawaiirei0/gx/pkg/errors"
 )
 
 // setEnvUnix is a stub for Windows builds

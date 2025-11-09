@@ -15,7 +15,7 @@
 package main
 
 import (
-    "github.com/yourusername/gx/internal/config"
+    "github.com/kawaiirei0/gx/internal/config"
 )
 
 func main() {
